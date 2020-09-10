@@ -16,7 +16,12 @@
         </v-col>
         <v-col cols="6" justify="center" align="center">
           <v-row justify="center" align="center">
-            <v-text-field clearable v-model="search" label="주소 검색">
+            <v-text-field
+              clearable
+              v-model="search"
+              label="주소 검색"
+              @keyup.enter="addressSearch"
+            >
             </v-text-field>
             <v-btn icon color="primary" @click="addressSearch">
               <v-icon>mdi-magnify</v-icon>
@@ -43,6 +48,17 @@
         :hide-default-footer="true"
         class="elevation-1"
       >
+        <template v-slot:item.address="{ item }">
+          <a
+            target="_blank"
+            :href="
+              `https://map.kakao.com/?map_type=TYPE_MAP&q=` +
+                item.address +
+                `&urlLevel=3`
+            "
+            >{{ item.address }}</a
+          >
+        </template>
         <template v-slot:no-data>
           검색 결과가 없습니다.
         </template>
@@ -53,7 +69,7 @@
         <v-card-title class="mb-5">
           <v-row justify="center">
             <span>
-              기다려주세요....
+              검색중...
             </span>
           </v-row>
         </v-card-title>
