@@ -29,10 +29,6 @@ function createWindow() {
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
       webSecurity: false,
     },
-    resizable: false,
-    maximizable: false,
-    fullscreen: false,
-    fullscreenable: false,
 
     icon: path.join(__static, "icon.png"),
   });

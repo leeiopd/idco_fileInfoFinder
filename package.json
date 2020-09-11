@@ -1,6 +1,6 @@
 {
   "name": "idco-field_info_finder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -60,5 +60,13 @@
   ],
   "description": "## Project setup",
   "author": "leeiopd@idco",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leeiopd/idco_fileInfoFinder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leeiopd/idco_fileInfoFinder/issues"
+  },
+  "homepage": "https://github.com/leeiopd/idco_fileInfoFinder#readme"
 }
